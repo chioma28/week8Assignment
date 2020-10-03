@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam&display=swap');
+​
+    html    {
+        box-sizing: border-box;
+        }
+​
+    *,
+    *::before,
+    *::after {
+            box-sizing: inherit;
+            }
+​
+​
+        body{
+            font-family: 'Kufam', cursive;
+            background-image: linear-gradient(to right top, #61dcf8, #40c7f1, #1db1e8, #009bde, #0d85d1);
+            min-height: 100vh;
+            text-align: center;
+        }
+​
+        main {
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 1000px;
+            margin: auto;
+        }
+​
+​
+         main .form {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+​
+        main .form .form-input {
+            width: 100%;
+        }
+​
+        main .form .form-input input {
+            padding: .5rem;
+            margin: .5rem;
+            border-radius: 5px;
+            width: 100%;
+            border: none;
+        }
+​
+        main .form .form-input button {
+    
+            width: 40%;
+            margin: 1rem auto;
+        }
+​
+        .form-btn{
+            display: flex;
+        }
+​
+​
+#main {
+         
+            display: flex;
+            position: center;
+            justify-content: space-between;
+        }
+​
+​
+.the-object{
+        
+        border-radius: 40px;
+        background-color: #f5f4f4;
+        
+        width: 50vh;
+        margin: 2rem 1rem;
+        overflow: hidden;
+        padding: 10px 0 10px;
+​
+    }
+​
+​
+.the-object img{
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        position: relative;
+        border-radius: 40px;
+        border: 2px solid  #0a6396;
+    }
+​
+    .object-text{
+        padding-top: 10px;
+        line-height: normal;
+    }
+​
+    .add-btn {
+        margin: 2rem;
+        background-color:#04b82b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 7px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+​
+    .up-btn{
+        margin: 2rem;
+        background-color:#643d02;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 7px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+​
+​
+    .one-btn{
+        margin: 0 1rem;
+        background-color:#03495a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 7px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+​
+​
+    .all-btn{
+        margin: 0 1rem;
+        background-color:#03495a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 7px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+​
+    .part-btn{
+        margin: 0 1rem;
+        background-color:#03495a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 7px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+​
+    .add-btn:hover{
+        background-color: #056d1c;
+    }
+​
+    .up-btn:hover{
+        background-color: #a06206;
+    }
+​
+​
+    .part-btn:hover{
+        background-color: #067c99;
+    }
+​
+    .one-btn:hover{
+        background-color: #067c99;
+    }
+​
+    .all-btn:hover{
+        background-color: #067c99;
+    }
+​
+    #delete-btn{
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 7px;
+        font-weight: bold;
+        margin: 1rem 1rem;
+        
+    }
+​
+    #delete-btn:hover{
+        background-color: #db2f2f;
+    }
+​
+​
+    #edit-btn{
+        background-color: #06771e;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 7px;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        
+    }
+​
+    
+    #edit-btn:hover{
+        background-color: #27ad10;
+    }
+​
+    #searchbtn{
+        display: flex;
+    }
+​
+​
+         /* Media queries */
+         @media screen and (max-width: 768px) {
+            main .form {
+                width: 70%;
+            }
+​
+            #main {
+                width: 70%;
+            }
+        }
+​
+        @media screen and (max-width: 550px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+​
+            main .form {
+                width: 90%;
+            }
+​
+            #main {
+                width: 90%;
+            }
+​
+            .profile {
+                padding: 1.5rem;
+            }
+​
+            .item {
+                width: 100%;
+            }
+        }

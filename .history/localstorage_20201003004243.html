@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="week8_assignment.css">
+    <link rel="stylesheet" href="array.css">
     <script src="https://kit.fontawesome.com/bc9f75cc29.js"></script>
     <title>Document</title>
 </head>
@@ -14,28 +14,30 @@
     <input type="text" id="fullName" placeholder="Full name"> <br>
     <input type="email" id="email" placeholder="Email"> <br>
     <input type="text" id="phone" placeholder="Phone"> <br>
-    <input type="text" id="pic" placeholder="pic1.jpg"> <br> <br>
-    <button id="add-user" onclick="addNewUser()"> Add new user<i class="fas fa-user-plus" id="add"></i></button> <br><br>
+    <input type="text" id="pic" placeholder="pic1.jpg"> <br> ​ ​<br>
+    <button id="add-user" onClick="addNewUser()"> Add new user<i class="fas fa-user-plus" id="add"></i></button> <br><br>
     <div class= "form-input">
     <input type="text" id= "find" placeholder = "Search by name">
     </div> 
     <div id="searchbtn">
-        <button class= "one-btn"  onclick="Search()">Find one record</button>
-        <button class= "all-btn" onclick="SearchAll()">Find all records</button>
-        <button class= "part-btn" onclick="SearchPartMatch()">Find Part Record</button>
+        <button class= "one-btn" onclick="search()">Find one record</button>
+        <button class= "all-btn" onclick="searchAll()">Find all records</button>
+        <button class= "part-btn" onclick="searchPartMatch()">Find Part Record</button>
         </div><br> 
         <h3>Users</h3>
-        
+        ​
             <h3 id="recordFound"> </h3>
-            
+            <div id= "Users">
+        ​
+            </div>
     <div id="users"></div>
     
-    
+    ​
     <script>
         internalUser = JSON.parse(localStorage.getItem("users"))
-        // if(internalUser == null){
-        //     internalUser = [];
-        // }
+        if(internalUser == null){
+            internalUser = [];
+        }
 
         function addNewUser() {
             // name = document.getElementById("fullName").value
@@ -72,7 +74,7 @@
 
             document.getElementById("users").innerHTML = usersCont
         }
-        
+
 
 
         function deleteUser(i) {
@@ -101,61 +103,10 @@
             displayUsers()
         }
 
-       
-        ///////////////////Searching for users ///////////////////
- function Search(){
-    param = document.getElementById("find").value
-    userObject = internalUser.find(x=>x.name==param)
-    if (userObject==undefined || userObject==null){
-        alert("No record found for " + param)
-    }
-    else {
-            internalUser=[];
-            internalUser.push(userObject)
-            document.getElementById("recordFound").innerHTML = internalUser.length + " record found"  
-            displayUsers()
-    }
-
- }
 
 
- function SearchAll(){
-    param = document.getElementById("find").value
-    userObject = internalUser.filter(x=>x.name==param)
-    if (userObject==undefined || userObject==null){
-        alert("No record found")
-    }
-    else {
-        if(internalUser.length > 1){
-        document.getElementById("recordFound").innerHTML = internalUser.length + " records found"
-        }
-        else{
-        document.getElementById("recordFound").innerHTML = internalUser.length + " record found"    
-        }
+
         displayUsers()
-    }
-
- }
-
-
- function SearchPartMatch(){
-    param = document.getElementById("find").value
-    userObject = internalUser.filter(x => x.name.includes(param))
-    if (userObject == undefined || userObject == null){
-        alert(`No record found for ${param}`);
-    }
-    else {
-        if(internalUser.length > 1){
-        document.getElementById("recordFound").innerHTML = internalUser.length + "records found"
-        }
-        else{
-        document.getElementById("recordFound").innerHTML = internalUser.length + " record found"    
-        }
-        displayUsers()
-    }
-
- }
- displayUsers()
     </script>
 
 </body>
